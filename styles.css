@@ -326,6 +326,50 @@ p {
     margin-bottom: 1rem;
 }
 
+/* Distributors Section */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+    border-radius: var(--border-radius);
+    background-color: var(--color-white);
+    margin-top: 2rem;
+}
+
+.distributor-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.distributor-table th,
+.distributor-table td {
+    padding: 1rem 1.5rem;
+    text-align: left;
+    border-bottom: 1px solid var(--color-border);
+    font-family: var(--font-body);
+}
+
+.distributor-table th {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.distributor-table tbody tr {
+    transition: var(--transition);
+}
+
+.distributor-table tbody tr:hover {
+    background-color: var(--color-light-gray);
+}
+
+.distributor-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
 /* Contact Section */
 .contact-container {
     display: grid;
