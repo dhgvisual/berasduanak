@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Du'Anak Distributor Center</title>
+    <title>CV Dua Putra - Jember</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,9 +38,9 @@
     <section id="home" class="hero section">
         <div class="container hero-container">
             <div class="hero-content">
-                <span class="badge">Distributor Resmi & Terpercaya</span>
+                <span class="badge">CV Dua Putra - Jember</span>
                 <h1 class="hero-title">Kualitas Terbaik untuk Kebutuhan Bisnis Anda.</h1>
-                <p class="hero-subtitle">Du'Anak Distributor Center hadir untuk menyediakan solusi distribusi yang efisien, cepat, dan andal ke seluruh wilayah.</p>
+                <p class="hero-subtitle">CV Dua Putra hadir menyediakan berbagai produk kebutuhan pokok, termasuk beras unggulan Du'Anak, dengan distribusi efisien dan andal ke seluruh wilayah.</p>
                 <div class="hero-actions">
                     <a href="#services" class="btn btn-primary">Lihat Layanan</a>
                     <a href="#about" class="btn btn-outline">Pelajari Lebih Lanjut</a>
@@ -57,7 +57,7 @@
         <div class="container about-container">
             <div class="about-text">
                 <h2 class="section-title">Dedikasi dalam Setiap Pengiriman.</h2>
-                <p>Sebagai pusat distribusi terkemuka, Du'Anak berfokus pada ketepatan waktu, kualitas produk, dan kepuasan mitra. Kami membangun ekosistem distribusi yang menghubungkan produsen dengan konsumen secara seamless.</p>
+                <p>Sebagai pusat distribusi terkemuka, CV Dua Putra berfokus pada ketepatan waktu, kualitas produk, dan kepuasan mitra. Kami membangun ekosistem distribusi terpercaya dengan berbagai produk unggulan kami.</p>
                 <div class="stats">
                     <div class="stat-item">
                         <h3>10+</h3>
@@ -108,10 +108,14 @@
         <div class="container">
             <div class="section-header text-center">
                 <h2 class="section-title">Jaringan Distribusi Kami.</h2>
-                <p>Temukan produk unggulan Du'Anak di berbagai mitra toko dan swalayan terpercaya di wilayah Anda.</p>
+                <p>Temukan produk-produk unggulan CV Dua Putra di berbagai mitra toko dan swalayan terpercaya di wilayah Anda.</p>
+            </div>
+
+            <div class="search-container">
+                <input type="text" id="distributorSearch" class="search-input" placeholder="Cari nama toko, alamat, atau area...">
             </div>
             
-            <div class="table-responsive">
+            <div class="table-responsive table-scroll">
                 <table class="distributor-table">
                     <thead>
                         <tr>
@@ -152,20 +156,20 @@
         <div class="container contact-container">
             <div class="contact-info">
                 <h2 class="section-title">Mari Berkolaborasi.</h2>
-                <p>Hubungi tim kami hari ini untuk mendiskusikan bagaimana Du'Anak dapat mendukung pertumbuhan bisnis Anda.</p>
+                <p>Hubungi tim kami hari ini untuk mendiskusikan bagaimana CV Dua Putra dapat mendukung pertumbuhan bisnis Anda.</p>
                 
                 <div class="contact-details">
                     <div class="detail">
                         <strong>Alamat:</strong>
-                        <p>Jl. Jendral Sudirman No. 123, Jakarta Pusat</p>
+                        <p>Jl. MH. Thamrin No.999, Dusun Krajan, Ajung, Kec. Kalisat, Kab. Jember, Jawa Timur 68193</p>
                     </div>
                     <div class="detail">
                         <strong>Email:</strong>
-                        <p>info@duanak.com</p>
+                        <p>info@cvduaputra.com</p>
                     </div>
                     <div class="detail">
                         <strong>Telepon:</strong>
-                        <p>+62 812 3456 7890</p>
+                        <p>081222221430</p>
                     </div>
                 </div>
             </div>
@@ -193,16 +197,31 @@
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-logo">
-                <a href="#"><img src="logo_duanak.png" alt="Du'Anak Logo" class="footer-logo-img"></a>
-                <p>Distributor Center terpercaya Anda.</p>
+                <a href="#"><img src="logo_duanak.png" alt="CV Dua Putra Logo" class="footer-logo-img"></a>
+                <p>Distributor Terpercaya di Jember.</p>
             </div>
             <div class="footer-links">
-                <p>&copy; 2026 Du'Anak Distributor Center. Hak Cipta Dilindungi.</p>
+                <p>&copy; 2026 CV Dua Putra. Hak Cipta Dilindungi.</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Table Search Filter
+        document.getElementById('distributorSearch').addEventListener('keyup', function() {
+            let filter = this.value.toLowerCase();
+            let rows = document.querySelectorAll('.distributor-table tbody tr');
+            
+            rows.forEach(row => {
+                let text = row.textContent.toLowerCase();
+                if (text.includes(filter)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+
         // Simple Mobile Menu Toggle
         document.querySelector('.mobile-menu-btn').addEventListener('click', function() {
             document.querySelector('.nav').classList.toggle('active');
